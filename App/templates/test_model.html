@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Model Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Add CSS style with #00C6A9 color scheme */
+        .prediction-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .prediction-table th, .prediction-table td {
+            border: 1px solid #00C6A9;
+            text-align: left;
+            padding: 8px;
+        }
+        .prediction-table th {
+            background-color: #00C6A9;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    {% if csv_data %}
+        <h3>CSV Data with Predictions:</h3>
+        {{ csv_data|safe }}
+    {% endif %}
+    {% if error_message %}
+        <h3>Error:</h3>
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
