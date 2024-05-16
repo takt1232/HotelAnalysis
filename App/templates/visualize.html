@@ -1,0 +1,40 @@
+{% load static %}
+<div class="center-content">
+    <div class="description">
+        <div class="cards" id="mean">
+        <h6>Name</h6>
+        <p>{{ csv_description.col.name }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Count</h6>
+        <p>{{ csv_description.col.count }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Mean</h6>
+        {{ csv_description.col.mean }}
+        </div>
+        <div class="cards" id="mean">
+        <h6>Std</h6>
+        {{ csv_description.col.std }}
+        </div>
+        <div class="cards" id="mean">
+        <h6>Min</h6>
+        <p>{{ csv_description.col.min }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Max</h6>
+        <p>{{ csv_description.col.max }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Type</h6>
+        <p> {{ csv_description.col.dtype }}</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="cards">
+            {% for image_path in visualization %}
+            <img src="{% static image_path %}" alt="Plot Image"/>
+            {% endfor %}
+        </div>
+    </div>
+</div>

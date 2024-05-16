@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+<style>
+    body {
+        overflow: auto !important; 
+    }
+</style>
+<section id="test">
+      <div class="container">
+        <h2>Test Model</h2>
+        <form id="test-model-form" method="post" enctype="multipart/form-data" action="{% url 'test_model' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="model-file" class="dropbox-label">Select Model File</label>
+            <input type="file" id="model-file" name="model-file" accept=".joblib,.pkl" required>
+          </div>
+          <div class="form-group">
+            <label for="csv-file" class="dropbox-label">Select CSV Data File</label>
+            <input type="file" id="csv-file" name="csv-file" accept=".csv" required>
+          </div>
+          <button class="btn" type="submit">Test Model</button>
+        </form>
+      </div>
+  </section>
+{% endblock %}

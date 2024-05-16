@@ -1,0 +1,78 @@
+<div class="center-content">
+  <div class="description">
+    <div class="cards" id="mean">
+      <h6>Name</h6>
+      <p>{{ csv_description.col.name }}</p>
+    </div>
+    <div class="cards" id="mean">
+      <h6>Count</h6>
+      <p>{{ csv_description.col.count }}</p>
+    </div>
+    <div class="cards" id="mean">
+      <h6>Mean</h6>
+      {{ csv_description.col.mean }}
+    </div>
+    <div class="cards" id="mean">
+      <h6>Std</h6>
+      {{ csv_description.col.std }}
+    </div>
+    <div class="cards" id="mean">
+      <h6>Min</h6>
+      <p>{{ csv_description.col.min }}</p>
+    </div>
+    <div class="cards" id="mean">
+      <h6>Max</h6>
+      <p>{{ csv_description.col.max }}</p>
+    </div>
+    <div class="cards" id="mean">
+      <h6>Type</h6>
+      <p> {{ csv_description.col.dtype }}</p>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="statistic-description">
+      {% if csv_description %}
+      <h2>CSV Description</h2>
+      <strong>Shape:</strong> Rows: {{ csv_description.shape.0 }},
+              Columns: {{ csv_description.shape.1 }}
+      <strong>Duplicates:</strong> {{ csv_description.duplicates }}
+      {% endif %}
+    </div>
+    <section id="description" class="about_section">
+      <div class="container">
+        <div class="second-layout">
+          <li>
+            <h2>Data Types</h2>
+            <table>
+              <tr>
+                <th>Attribute</th>
+                <th>Data Type</th>
+              </tr>
+              {% for column, data in csv_description.data_types.items %}
+              <tr>
+                <td>{{ column }}</td>
+                <td>{{ data }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </li>
+          <li>
+            <h2>Null Values</h2>
+            <table>
+              <tr>
+                <th>Attribute</th>
+                <th>Null Count</th>
+              </tr>
+              {% for column, null in csv_description.null_values.items %}
+              <tr>
+                <td>{{ column }}</td>
+                <td>{{ null }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </li>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

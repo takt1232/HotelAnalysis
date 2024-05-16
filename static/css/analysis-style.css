@@ -1,0 +1,198 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;  
+}
+
+p {
+    margin-block-end: 0px;
+}
+
+h6 {
+    margin: 0px;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    box-shadow: 0px 0px 4px 0px #1d1308;
+    gap: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    z-index: 2;
+}
+
+.content {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: rgb(233, 233, 233);
+}
+
+.content .top-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content .top-bar-sec {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: large;
+    align-items: flex-end;
+}
+
+.content .top-bar .column-selector {
+    width: 300px;
+}
+
+.content .top-bar .top-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.content .center-content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.content .center-content .description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.cards {
+  background-color: #f8f9fa; /* Background color */
+  border: 1px solid #ced4da; /* Border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  margin-bottom: 20px; /* Margin bottom */
+}
+
+.cards h6 {
+  color: #343a40; /* Text color */
+  font-size: 18px; /* Font size */
+  margin-bottom: 10px; /* Margin bottom */
+}
+
+.cards p {
+  color: #6c757d; /* Text color */
+  font-size: 16px; /* Font size */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for select element */
+#col-select {
+  padding: 8px; /* Padding */
+  font-size: 16px; /* Font size */
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%;
+}
+
+/* Style for select options */
+#col-select option {
+  padding: 8px; /* Padding */
+  font-size: 16px; /* Font size */
+  background-color: #ffffff; /* Background color */
+  color: #333333; /* Text color */
+}
+
+.content .center-content .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.content .center-content .main-content .statistic-description {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+
+.content .center-content .main-content .pivot-table-container #pivot-tables {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #a0650c;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#visualization-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.visualization-item {
+  width: 100%; /* Ensure the image fills the width of its container */
+  margin-bottom: 20px; /* Add some spacing between images */
+}
+
+.visualization-item img {
+  width: 100%;; /* Ensure the image does not exceed the container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally within its container */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #faedd8;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  white-space: nowrap;
+}

@@ -1,0 +1,36 @@
+<div class="top-bar">
+  <div class="top-bar-sec">
+    <div class="column-selector">
+      <select id="col-select" onchange="selectColumn()">
+        <option value="select col">Select Column</option>
+        {% for column in csv_description.statistics.columns %}
+        <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="top-navigation">
+      <div class="description-nav nav-item active">
+        <a href="/upload?action=describe">Description</a>
+      </div>
+      <div class="description-nav nav-item active">
+        <a href="/upload?action=analysis">Analysis</a>
+      </div>
+      <div class="description-nav nav-item active">
+        <a href="/upload?action=remove_missing_values">Remove Null</a>
+      </div>
+      <div class="remove-tool-nav nav-item">
+        <a href="/upload?action=remove_duplicates">Remove Duplicates</a>
+      </div>
+      <div class="visualization-nav nav-item">
+        <a href="/upload?action=visualize">Visualization</a>
+      </div>
+      <div class="train-tool-nav nav-item">
+        <a href="/upload?action=train_model">Train</a>
+      </div>
+      <div class="test-tool-nav nav-item">
+        <a href="{% url 'test' %}">Test</a>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+</div>

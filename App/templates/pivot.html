@@ -1,0 +1,62 @@
+<div class="center-content">
+    <div class="description">
+        <div class="cards" id="mean">
+        <h6>Name</h6>
+        <p>{{ csv_description.col.name }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Count</h6>
+        <p>{{ csv_description.col.count }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Mean</h6>
+        {{ csv_description.col.mean }}
+        </div>
+        <div class="cards" id="mean">
+        <h6>Std</h6>
+        {{ csv_description.col.std }}
+        </div>
+        <div class="cards" id="mean">
+        <h6>Min</h6>
+        <p>{{ csv_description.col.min }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Max</h6>
+        <p>{{ csv_description.col.max }}</p>
+        </div>
+        <div class="cards" id="mean">
+        <h6>Type</h6>
+        <p> {{ csv_description.col.dtype }}</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="pivot-table-container">
+            <h2>Pivot Tables</h2>
+            <div id="pivot-tables">
+                <div class="pivot-table">
+                <h3>Number of Cancellations per Hotel</h3>
+                {{ feature_3|safe }}
+            </div>
+            <div class="pivot-table">
+                <h3>Lead Time vs. Previous Cancellations</h3>
+                {{ feature_1|safe }}
+            </div>
+            <div class="pivot-table">
+                <h3>Lead Time vs. Booking Changes</h3>
+                {{ feature_2|safe }}
+            </div>
+            <div class="pivot-table">
+                <h3>Adults vs. Children</h3>
+                {{ demo_1|safe }}
+            </div>
+            <div class="pivot-table">
+                <h3>Adults vs. Babies</h3>
+                {{ demo_2|safe }}
+            </div>
+            <div class="pivot-table">
+                <h3>Adults vs. Total of Special Requests</h3>
+                {{ demo_3|safe }}
+            </div>
+        </div>
+    </div>
+</div>

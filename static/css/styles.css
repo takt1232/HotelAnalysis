@@ -1,0 +1,130 @@
+    /* styles.css */
+
+    /* General styling */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../image/hotel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    }
+
+    a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;  
+    }
+
+    p {
+    margin-block-end: 0px;
+    }
+
+    .transparent {
+    width: 100%;
+    height: 300px;
+    }
+
+    .book_section {
+    text-align: left;
+    color: #000000;   
+    background-color: #fff;
+    min-height: 100vh; /* Adjust as needed */
+    box-shadow: 0px 0px 100px 0px #473526;
+    }
+
+    .book_section h2 {
+    margin-bottom: 20px;
+    color: #422b16;
+    }
+
+    .book_section .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    min-height: 240px;
+    }
+
+    .book_section .container .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: end;
+    }
+
+    .book_section .container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+
+    .book_section .container .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    }
+
+    .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .dropbox-label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+    .form-group input {
+    border: 2px dashed #422b16;
+    padding: 10px;
+    color: #4e2204;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+
+    .btn {
+    background-color: #A17C5E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+
+    .logo-container {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    }
+
+    .logo-container img {
+    width: 64px;
+    height: 128px;
+    }
+
+    .divider {
+  width: 100%;
+  height: 2px;
+  background-color: #27695f;
+  border-radius: 10px;
+  display: flex;
+  margin: 20px 0px;
+}
+
+#test {
+    display: flex;
+    padding: 20px;
+    color: #000000;   
+    background-color: #fff;
+    min-height: 100vh; /* Adjust as needed */
+    box-shadow: 0px 0px 100px 0px #473526;
+}
